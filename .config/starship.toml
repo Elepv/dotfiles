@@ -19,9 +19,9 @@ disabled = false
 
 [os.symbols]
 Windows = ' '
-Arch = '󰣇'
+Arch = ''
 Ubuntu = ''
-Macos = '󰀵'
+Macos = ''
 
 
 # FIRST LINE/ROW: Info & Status

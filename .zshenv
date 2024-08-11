@@ -9,6 +9,12 @@ if [[ "$TERM" == "tmux-256color" ]]; then
 fi
 
 export HISTORY_IGNORE="(ls|cd|pwd|exit|sudo reboot|history|cd -|cd ..)"
+export EDITOR=nvim
+export VISUAL=nvim
+export KUBE_EDITOR=nvim
+
+# disable brewhome auto update
+export HOMEBREW_NO_AUTO_UPDATE=true
 
 ### PATH
 if [ -d "$HOME/.bin" ] ;
@@ -35,6 +41,11 @@ export PATH="$HOME/emacs-configs/doom-emacs/bin:$PATH"
 #export LDFLAGS="-L/usr/local/opt/node@14/lib"
 #export CPPFLAGS="-I/usr/local/opt/node@14/include"
 
+# lua
+export PATH="/usr/local/opt/lua@5.3/bin:$PATH"
+export LDFLAGS="-L/usr/local/opt/lua@5.3/lib"
+export CPPFLAGS="-I/usr/local/opt/lua@5.3/include"
+export PKG_CONFIG_PATH="/usr/local/opt/lua@5.3/lib/pkgconfig"
 
 ### 设置和初始化 Node Version Manager (NVM) 的环境 ###
 export NVM_DIR="$HOME/.nvm"
@@ -45,3 +56,4 @@ export PATH="/opt/homebrew/opt/node@20/bin:$PATH"
 ### bat theme ###
 export BAT_THEME=tokyonight_night
 
+. "$HOME/.cargo/env"
