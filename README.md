@@ -12,6 +12,13 @@
 curl -sL https://raw.githubusercontent.com/Elepv/dotfiles/master/pre_bootstrap.sh | bash
 ```
 
+
+Update plugins with submodules
+```shell
+yadm submodule update --remote
+
+```
+
 ### yadm 常用命令
 
 

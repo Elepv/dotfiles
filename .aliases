@@ -1,0 +1,137 @@
+## keymappings
+
+# -------------------- Remapping settings --------------------
+bindkey -s '^f' 'fzf^M'
+bindkey -s '^o' 'ranger^M'
+bindkey -s '^s' 'ncdu^M'
+
+
+### ALIASES ### 
+# tmux
+# Set Tmux plugin to resurrect every time workstation restarted 
+# Ctrl+A Ctrl+S to Save / Ctrl+A Ctrl+R to Resurrect
+alias ta='tmux attach -t'
+alias tl='tmux ls'
+alias tn='tmux new -s'  # create a new session. If in a session to create a new. must be like this: "tn newname -d"
+alias tk='tmux kill-session -t'
+alias ts='tmux switch -t'
+alias tka="tmux kill-server"
+alias td="tmux detach"
+
+# ops
+alias t="terraform "
+alias ap="ansible-playbook "
+alias api="ansible-playbook -i inventory "
+
+# cncf
+alias dcs=docker-compose
+
+# docker
+alias d='docker'
+alias dr='docker run'
+alias dins='docker inspect'
+alias di='docker images'
+alias dps='docker ps'
+alias dpsa='docker ps -all'
+alias dri='docker rmi'
+alias drm='docker rm'
+alias db='docker build'
+alias dt='docker tag'
+
+# kubernetes
+# alias k='kubectl'
+# alias kn='kubens'
+# alias kc='kubectl create'
+# alias kg='kubectl get'
+# alias kdes='kubectl describe'
+# alias ka='kubectl apply'
+# alias kdel='kubectl delete'
+# alias kcl="kubectl config get-contexts"
+# alias kcs="kubectl config use-context"
+# alias kl="kubectl logs"
+# alias h="helm "
+# alias kga='kubectl api-resources -o name --verbs=list --namespaced | xargs -n 1 kubectl get --show-kind --ignore-not-found -n'
+# alias kdelallin='kubectl delete all --all -n'
+# alias kr='kubectl rollout'
+
+# navigation
+alias ..='cd ..' 
+alias ...='cd ../..'
+alias .3='cd ../../..'
+alias .4='cd ../../../..'
+alias .5='cd ../../../../..'
+
+# vim and emacs
+alias v="nvim"
+
+# get fastest mirrors
+#alias mirror="sudo reflector -f 30 -l 30 --number 10 --verbose --save /etc/pacman.d/mirrorlist"
+#alias mirrord="sudo reflector --latest 50 --number 20 --sort delay --save /etc/pacman.d/mirrorlist"
+#alias mirrors="sudo reflector --latest 50 --number 20 --sort score --save /etc/pacman.d/mirrorlist"
+#alias mirrora="sudo reflector --latest 50 --number 20 --sort age --save /etc/pacman.d/mirrorlist"
+
+# Changing "ls" to "lsd"
+alias la='lsd -al'
+alias lsa='lsd -a'
+alias ll='lsd -l'
+alias lt='lsd --tree'
+alias l.='lsd -a | egrep "^\."'
+
+
+# Colorize grep output (good for log files)
+alias cgrep='grep --color=auto'
+
+# adding flags
+#alias df='df -h'                          # human-readable sizes
+#alias free='free -m'                      # show sizes in MB
+#alias lynx='lynx -cfg=~/.lynx/lynx.cfg -lss=~/.lynx/lynx.lss -vikeys'
+#alias vifm='./.config/vifm/scripts/vifmrun'
+
+## get top process eating memory
+#alias psmem='ps auxf | sort -nr -k 4'
+#alias psmem10='ps auxf | sort -nr -k 4 | head -10'
+
+## get top process eating cpu ##
+alias psg='ps aux | grep'
+
+# git
+alias addup='git add -u'
+alias addall='git add .'
+alias branch='git branch'
+alias checkout='git checkout'
+alias clone='git clone'
+alias commit='git commit -m'
+alias fetch='git fetch'
+alias pull='git pull origin'
+alias push='git push origin'
+alias status='git status'
+alias tag='git tag'
+alias ntag='git tag -a'
+alias lg='lazygit'
+
+# # switch between shells
+alias tobash="sudo chsh $USER -s /bin/bash && echo 'Now log out.'"
+alias tozsh="sudo chsh $USER -s /bin/zsh && echo 'Now log out.'"
+
+# proxy
+# alias proxy='export all_proxy=socks5://10.0.9.99:7890'
+alias proxy='export https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.1:7890 all_proxy=socks5://127.0.0.1:7890'
+alias proxy24='export all_proxy=socks5://10.0.9.24:7890'
+alias unproxy='unset all_proxy'
+# alias whami='curl cip.cc'
+alias whereami='curl ip-api.com/json | jq .'
+alias ispx='env | grep proxy'
+
+# dell ipmi control fan
+alias fanspd16p='sudo ipmitool -I lanplus -H 10.0.9.9 -U root -P 03220123Crisv raw \
+0x30 0x30 0x01 0x00
+sudo ipmitool -I lanplus -H 10.0.9.9 -U root -P 03220123Crisv raw \
+0x30 0x30 0x02 0xff 0x10'
+
+alias fanspd8p='sudo ipmitool -I lanplus -H 10.0.9.9 -U root -P 03220123Crisv raw \
+0x30 0x30 0x01 0x00
+sudo ipmitool -I lanplus -H 10.0.9.9 -U root -P 03220123Crisv raw \
+0x30 0x30 0x02 0xff 0x08'
+
+alias showfanspd='sudo ipmitool -I lanplus -H 10.0.9.9 -U root -P 03220123Crisv \
+  sensor reading "Temp" "Fan1 RPM" "Fan2 RPM" "Fan3 RPM" "Fan4 RPM" "Fan5 RPM" "Fan6 RPM"'

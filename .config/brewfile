@@ -33,6 +33,7 @@ brew "pandoc" # Swiss-army knife of markup format conversion
 brew "prettier" # Code formatter for JavaScript, CSS, JSON, GraphQL, Markdown, YAML
 brew "pyenv" # Python 版本管理
 brew "python" # Python 编程语言
+brew "ripgrep" # for neovim
 brew "ruby" # Ruby 编程语言
 brew "shfmt" # Autoformat shell script source code
 brew "sleepwatcher", restart_service: true # Monitors sleep, wakeup, and idleness of a Mac
