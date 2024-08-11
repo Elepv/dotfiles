@@ -1,0 +1,224 @@
+# Inserts a blank line between shell prompts
+add_newline = true
+command_timeout = 10000
+
+format = """$os$username$hostname$kubernetes$directory$git_branch$git_status"""
+
+
+# Make prompt a single line instead of two lines
+[line_break]
+disabled = false
+
+
+
+# ---
+
+[os]
+format = '[$symbol](bold white) '   
+disabled = false
+
+[os.symbols]
+Windows = ' '
+Arch = '󰣇'
+Ubuntu = ''
+Macos = '󰀵'
+
+
+# FIRST LINE/ROW: Info & Status
+## First param ─┌
+[username]
+# format = " [╭─$user]($style) "
+format = " [$user]($style) "
+# style_user = "bold dimmed blue"
+style_user = "bold #215254"
+style_root = "bold red"
+show_always = true
+
+## Second param
+[hostname]
+ssh_only = false
+format = "on [$hostname]($style) "
+trim_at = "-"
+style = "bold dimmed white"
+disabled = false
+
+# Third param
+[directory]
+format = 'at [$path]($style)[$read_only]($read_only_style) '
+truncation_length = 5
+#truncation_symbol = '… /'
+home_symbol = '󰋜 ~'
+style = "bold cyan"
+read_only = " 🔒"
+read_only_style= "bold italic white"
+
+# truncation_length = 0
+# truncate_to_repo = true
+# truncation_symbol = "repo: "
+
+
+## Before all the version info (python, nodejs, php, etc.)
+[git_branch]
+format = " [$symbol$branch]($style) "
+symbol = "🌱 "
+style = "bold yellow"
+
+[git_commit]
+commit_hash_length = 8
+style = "bold white"
+
+[git_state]
+format = '[\($state( $progress_current of $progress_total)\)]($style) '
+cherry_pick = "[🍒 PICKING](bold red)"
+
+[git_metrics]
+added_style = "bold blue"
+format = '[+$added]($added_style)/[-$deleted]($deleted_style) '
+
+[git_status]
+conflicted = "⚔️ "
+ahead = "🏎️ 💨 ×${count} "
+behind = "🐢 ×${count} "
+diverged = "🔱 🏎️ 💨 ×${ahead_count} 🐢 ×${behind_count} "
+untracked = "🛤️  ×${count} "
+stashed = "📦 "
+modified = "📝 ×${count} "
+staged = "🗃️  ×${count} "
+renamed = "📛 ×${count} "
+deleted = "🗑️  ×${count} "
+style = "bright-white"
+format = "$all_status$ahead_behind"
+
+
+
+# Last param in the first line/row
+[cmd_duration]
+min_time = 1
+format = "took [$duration]($style)"
+disabled = false
+
+
+# SECOND LINE/ROW: Prompt
+## Somethere at the beginning
+[jobs]
+symbol = " 🎏 + "
+number_threshold = 4
+symbol_threshold = 0
+
+## then battery
+[battery] #Displays whenever the laptop is charging, have full battery or is using the power
+full_symbol = "🔋 "
+# charging_symbol = "🔌 "
+charging_symbol = "⚡️ "
+discharging_symbol = "💀 "
+unknown_symbol = "🔋 "
+# charging_symbol = "⚡ "
+# discharging_symbol = "👨‍💻"
+format = "[$symbol$percentage]($style) "
+disabled = true 
+
+[[battery.display]]
+threshold = 20
+style = "bold red"
+
+[[battery.display]]
+threshold = 50
+style = "bold orange"
+# style ="bold yellow"
+discharging_symbol = "💦"
+
+[[battery.display]]
+threshold = 80
+style ="bold green"
+discharging_symbol = "放电 "
+# This just shows how much power the laptop has in the terminal, the colors shows if it starting to get critical to charge the laptop
+
+## Prompt: optional param 1
+[time]
+disabled = false
+time_format = "%T"
+format = " 🕙[ $time]($style) \n"
+# style = "#f57800"
+style = "bright-white"
+# format = "[ $time]($style) "
+# style = "white"
+
+## Prompt: param 2 └─
+[character]
+# success_symbol = "[ ➜](bold green)"
+success_symbol = " [╰─λ](bold red)"
+error_symbol = "[💥](bold red) "
+# error_symbol = " [➜✗ ](bold red)"
+# error_symbol = " [×](bold red)"
+
+# SYMBOLS
+[status]
+symbol = "🔴"
+format = '[\[$symbol$status_common_meaning$status_signal_name$status_maybe_int\]]($style)'
+map_symbol = true
+disabled = false
+
+[aws]
+format = 'on [$symbol($profile )(\($region\) )]($style)'
+style = "bold blue"
+symbol = "🅰 "
+[aws.region_aliases]
+ap-southeast-2 = "au"
+us-east-1 = "va"
+
+[docker_context]
+format = "via [🐋 $context](blue bold)"
+
+[golang]
+symbol = "go "
+
+[helm]
+format = "via [⎈ $version](bold white) "
+
+[pulumi]
+symbol = "🛥 "
+format = "[$symbol$stack]($style) "
+
+[java]
+symbol = " "
+
+[kotlin]
+symbol = "🅺 "
+
+[kubernetes]
+format = 'on [⛵ $context \($namespace\)](dimmed green) '
+disabled = false
+[kubernetes.context_aliases]
+"dev.local.cluster.k8s" = "dev"
+".*/openshift-cluster/.*" = "openshift"
+"gke_.*_(?P<cluster>[\\w-]+)" = "gke-$cluster"
+
+[nim]
+style = "yellow"
+symbol = "🎣 "
+
+[nix_shell]
+disabled = true
+impure_msg = "[impure shell](bold red)"
+pure_msg = "[pure shell](bold green)"
+format = 'via [☃️ $state( \($name\))](bold blue) '
+
+[nodejs]
+format = "via [🤖 $version](bold green) "
+
+[package]
+format = "via [🎁 $version](208 bold) "
+
+[php]
+format = "via [🔹 $version](147 bold) "
+
+[python]
+format = "[$symbol$version]($style) "
+style = "bold green"
+
+[rust]
+format = "via [⚙️ $version](red bold)"
+style = "bold green"
+
+[swift]
+symbol = "ﯣ "
