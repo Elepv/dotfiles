@@ -13,4 +13,4 @@ eval "fastfetch"
 # Load Starship
 eval "$(starship init zsh)"
 
-PROMPT="${PROMPT}"$'\n\n'
+# PROMPT="${PROMPT}"$'\n\n'

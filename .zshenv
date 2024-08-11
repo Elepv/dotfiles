@@ -17,13 +17,8 @@ export KUBE_EDITOR=nvim
 export HOMEBREW_NO_AUTO_UPDATE=true
 
 ### PATH
-if [ -d "$HOME/.bin" ] ;
-  then PATH="$HOME/.bin:$PATH"
-fi
 
-if [ -d "$HOME/.local/bin" ] ;
-  then PATH="$HOME/.local/bin:$PATH"
-fi
+export PATH=$PATH:$HOME/.bin:$HOME/.local/bin:/usr/local/sbin:$HOME/.cargo/bin
 
 if [ -d "$HOME/Applications" ] ;
   then PATH="$HOME/Applications:$PATH"
@@ -35,7 +30,6 @@ export PATH="$GOPATH/bin:$PATH"
 export PATH="/usr/local/istio/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="/usr/local/opt/node@14/bin:$PATH"
-export PATH="$HOME/emacs-configs/doom-emacs/bin:$PATH"
 #export KUBECONFIG="${KUBECONFIG}:$HOME/.kube/config"
 
 #export LDFLAGS="-L/usr/local/opt/node@14/lib"
@@ -55,5 +49,3 @@ export PATH="/opt/homebrew/opt/node@20/bin:$PATH"
 
 ### bat theme ###
 export BAT_THEME=tokyonight_night
-
-. "$HOME/.cargo/env"
