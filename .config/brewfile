@@ -9,6 +9,7 @@ tap "jesseduffield/lazydocker"
 # Install command-line tools and applications
 brew "ansible" # 自动化配置管理工具
 brew "bat" # 'cat' 命令的增强版，带有语法高亮和Git集成
+brew "black" # for neovim
 brew "btop" # 系统监视工具，类似于 'htop')
 brew "cloudflared" # Cloudflare Tunnel client (formerly Argo Tunnel
 brew "cmake" # 跨平台的安装（编译）软件
@@ -27,20 +28,25 @@ brew "jq" # 命令行 JSON 处理器
 brew "lazydocker" # Docker 的简化命令行界面
 brew "lazygit" # Git的简化命令行界面
 brew "lsd" # 带有大量特色和美化的 'ls' 命令
+brew "luarocks" # for neovim
 brew "neovim" # Vim 文本编辑器的现代化分支
 brew "node" # JavaScript 运行时环境
 brew "pandoc" # Swiss-army knife of markup format conversion
-brew "prettier" # Code formatter for JavaScript, CSS, JSON, GraphQL, Markdown, YAML
+brew "prettier" # Code formatter for JavaScript, CSS, JSON, GraphQL, Markdown, YAML. For neovim
 brew "pyenv" # Python 版本管理
 brew "python" # Python 编程语言
+brew "pyvim" # for neovim
 brew "ripgrep" # for neovim
 brew "ruby" # Ruby 编程语言
+brew "rust" # Rust 编程语言
 brew "shfmt" # Autoformat shell script source code
 brew "sleepwatcher", restart_service: true # Monitors sleep, wakeup, and idleness of a Mac
 brew "starship" # 用于各种 shell 的快速、可定制的提示符
+brew "stylua" # for neovim
 brew "subversion" # Version control system designed to be a better CVS
 brew "thefuck" # 纠正您之前命令行中的错误
 brew "tmux" # 终端复用器
+brew "tree-sitter" # for neoivm
 brew "wakeonlan" # Sends magic packets to wake up network-devices
 brew "wget" # 网络下载工具
 brew "yadm" # 管理 dotfiles 的工具
