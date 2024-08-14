@@ -23,6 +23,7 @@ brew "gh" # GitHub 的命令行工具，用于操作仓库
 brew "git" # 分布式版本控制系统
 brew "gnupg" # 完整的和自由的实现PGP标准的软件
 brew "go" # Go编程语言
+brew "gpg" # 加密
 brew "htop" # 交互式进程查看器
 brew "jq" # 命令行 JSON 处理器
 brew "lazydocker" # Docker 的简化命令行界面
@@ -138,3 +139,6 @@ vscode "whizkydee.material-palenight-theme"
 vscode "yokoe.vscode-postfix-go"
 vscode "yzhang.markdown-all-in-one"
 vscode "zhuangtongfa.material-theme"
+
+# new and testing
+brew "rclone" # 同步
