@@ -55,6 +55,25 @@
         "visible": false
       }
     ],
+    "aws-s3": {
+      "_configName": "CFR2",
+      "_id": "9562adcc-871d-4f50-bdae-b9c5f28cfcf1",
+      "_createdAt": 1723575111119,
+      "_updatedAt": 1723736137533,
+      "accessKeyID": "38f1af69c7572ff9de9e72ea589e3cd2",
+      "secretAccessKey": "d6652bd724d0a5ca9caf51cc3bdaea77bbe24322f808de575c08dca1f573e9fe",
+      "bucketName": "image-hosting",
+      "uploadPath": "{year}/{month}/{fileName}-{md5}.{extName}",
+      "region": "APAC",
+      "endpoint": "https://b8bab80cdf3a3e295c7ca99a21319e54.r2.cloudflarestorage.com/image-hosting",
+      "proxy": "http://127.0.0.1:7890",
+      "urlPrefix": "https://images.gtoxai.com",
+      "urlSuffix": "",
+      "pathStyleAccess": true,
+      "rejectUnauthorized": true,
+      "acl": "public-read",
+      "disableBucketPrefixToURL": false
+    }
   },
   "settings": {
     "shortKey": {
@@ -75,7 +94,13 @@
     "npmRegistry": "",
     "privacyEnsure": true,
     "pasteStyle": "markdown",
-    "autoStart": true
+    "autoStart": true,
+    "showDockIcon": false,
+    "useBuiltinClipboard": true,
+    "uploadNotification": false,
+    "encodeOutputURL": true,
+    "isListeningClipboard": false,
+    "isHideDock": true
   },
   "picgoPlugins": {
     "picgo-plugin-s3": true
@@ -112,7 +137,7 @@
           "_configName": "CFR2",
           "_id": "9562adcc-871d-4f50-bdae-b9c5f28cfcf1",
           "_createdAt": 1723575111119,
-          "_updatedAt": 1723579530286,
+          "_updatedAt": 1723736137533,
           "accessKeyID": "38f1af69c7572ff9de9e72ea589e3cd2",
           "secretAccessKey": "d6652bd724d0a5ca9caf51cc3bdaea77bbe24322f808de575c08dca1f573e9fe",
           "bucketName": "image-hosting",
