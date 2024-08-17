@@ -96,9 +96,9 @@
       "_configName": "CFR2",
       "_id": "b95b6680-94df-4f87-93d4-37905a0370fb",
       "_createdAt": 1723815456493,
-      "_updatedAt": 1723815526339,
-      "accessKeyID": "38f1af69c7572ff9de9e72ea589e3cd2",
-      "secretAccessKey": "2a8e877769e2a6ee59a60e8a823ec71a031f9e2efb10f2606f424075059e3977",
+      "_updatedAt": 1723817378819,
+      "accessKeyID": "667b33f29d2a5b6cf99d075061cf7452",
+      "secretAccessKey": "6b463313ef54c3e27cd4dfcb6c63c5aabad0db17e1d29b5995bee3815fa31905",
       "bucketName": "image-hosting",
       "uploadPath": "{year}/{month}/{fileName}-{md5}.{extName}",
       "region": "APAC",
@@ -109,6 +109,12 @@
       "rejectUnauthorized": true,
       "acl": "public-read",
       "disableBucketPrefixToURL": false
+    },
+    "advancedplist": {
+      "_configName": "Default",
+      "_id": "a8179632-2fb5-4b08-833d-01083138dbc5",
+      "_createdAt": 1723817106940,
+      "_updatedAt": 1723817106940
     }
   },
   "settings": {
@@ -129,7 +135,7 @@
     "showUpdateTip": true,
     "encodeOutputURL": true,
     "autoStart": true,
-    "isHideDock": true,
+    "isHideDock": false,
     "deleteCloudFile": true,
     "manualPageOpen": "window"
   },
@@ -146,9 +152,9 @@
           "_configName": "CFR2",
           "_id": "b95b6680-94df-4f87-93d4-37905a0370fb",
           "_createdAt": 1723815456493,
-          "_updatedAt": 1723815526339,
-          "accessKeyID": "38f1af69c7572ff9de9e72ea589e3cd2",
-          "secretAccessKey": "2a8e877769e2a6ee59a60e8a823ec71a031f9e2efb10f2606f424075059e3977",
+          "_updatedAt": 1723817378819,
+          "accessKeyID": "667b33f29d2a5b6cf99d075061cf7452",
+          "secretAccessKey": "6b463313ef54c3e27cd4dfcb6c63c5aabad0db17e1d29b5995bee3815fa31905",
           "bucketName": "image-hosting",
           "uploadPath": "{year}/{month}/{fileName}-{md5}.{extName}",
           "region": "APAC",
@@ -162,6 +168,17 @@
         }
       ],
       "defaultId": "b95b6680-94df-4f87-93d4-37905a0370fb"
+    },
+    "advancedplist": {
+      "configList": [
+        {
+          "_configName": "Default",
+          "_id": "a8179632-2fb5-4b08-833d-01083138dbc5",
+          "_createdAt": 1723817106940,
+          "_updatedAt": 1723817106940
+        }
+      ],
+      "defaultId": "a8179632-2fb5-4b08-833d-01083138dbc5"
     }
   }
 }
