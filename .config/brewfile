@@ -151,3 +151,4 @@ vscode "zhuangtongfa.material-theme"
 # new and testing
 brew "rclone" # 同步
 brew "cloudflare-wrangler2" # Cloudflare Workers 的命令行工具
+brew "pandoc" # common
