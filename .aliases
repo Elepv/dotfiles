@@ -6,9 +6,23 @@ bindkey -s '^o' 'ranger^M'
 bindkey -s '^s' 'ncdu^M'
 
 
-### ALIASES ### 
+### ALIASES ###
+
+# switch between shells
+alias tobash="sudo chsh $USER -s /bin/bash && echo 'Now log out.'"
+alias tozsh="sudo chsh $USER -s /bin/zsh && echo 'Now log out.'"
+
+# proxy
+# alias proxy='export all_proxy=socks5://10.0.9.99:7890'
+alias proxy='export https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.1:7890 all_proxy=socks5://127.0.0.1:7890'
+alias proxy24='export all_proxy=socks5://10.0.9.24:7890'
+alias unproxy='unset all_proxy'
+# alias whami='curl cip.cc'
+alias whereami='curl ip-api.com/json | jq .'
+alias ispx='env | grep proxy'
+
 # tmux
-# Set Tmux plugin to resurrect every time workstation restarted 
+# Set Tmux plugin to resurrect every time workstation restarted
 # Ctrl+A Ctrl+S to Save / Ctrl+A Ctrl+R to Resurrect
 alias ta='tmux attach -t'
 alias tl='tmux ls'
@@ -39,23 +53,23 @@ alias db='docker build'
 alias dt='docker tag'
 
 # kubernetes
-# alias k='kubectl'
-# alias kn='kubens'
-# alias kc='kubectl create'
-# alias kg='kubectl get'
-# alias kdes='kubectl describe'
-# alias ka='kubectl apply'
-# alias kdel='kubectl delete'
-# alias kcl="kubectl config get-contexts"
-# alias kcs="kubectl config use-context"
-# alias kl="kubectl logs"
-# alias h="helm "
-# alias kga='kubectl api-resources -o name --verbs=list --namespaced | xargs -n 1 kubectl get --show-kind --ignore-not-found -n'
+alias k='kubectl'
+alias kn='kubens'
+alias kc='kubectl create'
+alias kg='kubectl get'
+alias kd='kubectl describe'
+alias ka='kubectl apply'
+alias kdel='kubectl delete'
+alias kcl="kubectl config get-contexts"
+alias kcs="kubectl config use-context"
+alias kl="kubectl logs"
+alias h="helm "
+alias kga='kubectl api-resources -o name --verbs=list --namespaced | xargs -n 1 kubectl get --show-kind --ignore-not-found -n'
 # alias kdelallin='kubectl delete all --all -n'
-# alias kr='kubectl rollout'
+alias kr='kubectl rollout'
 
 # navigation
-alias ..='cd ..' 
+alias ..='cd ..'
 alias ...='cd ../..'
 alias .3='cd ../../..'
 alias .4='cd ../../../..'
@@ -108,19 +122,6 @@ alias status='git status'
 alias tag='git tag'
 alias ntag='git tag -a'
 alias lg='lazygit'
-
-# # switch between shells
-alias tobash="sudo chsh $USER -s /bin/bash && echo 'Now log out.'"
-alias tozsh="sudo chsh $USER -s /bin/zsh && echo 'Now log out.'"
-
-# proxy
-# alias proxy='export all_proxy=socks5://10.0.9.99:7890'
-alias proxy='export https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.1:7890 all_proxy=socks5://127.0.0.1:7890'
-alias proxy24='export all_proxy=socks5://10.0.9.24:7890'
-alias unproxy='unset all_proxy'
-# alias whami='curl cip.cc'
-alias whereami='curl ip-api.com/json | jq .'
-alias ispx='env | grep proxy'
 
 # dell ipmi control fan
 alias fanspd16p='sudo ipmitool -I lanplus -H 10.0.9.9 -U root -P 03220123Crisv raw \
