@@ -137,7 +137,8 @@
     "autoStart": true,
     "isHideDock": false,
     "deleteCloudFile": true,
-    "manualPageOpen": "window"
+    "manualPageOpen": "window",
+    "useBuiltinClipboard": false
   },
   "picgoPlugins": {
     "picgo-plugin-rclone": true

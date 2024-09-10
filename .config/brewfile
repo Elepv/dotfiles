@@ -152,3 +152,6 @@ vscode "zhuangtongfa.material-theme"
 brew "rclone" # 同步
 brew "cloudflare-wrangler2" # Cloudflare Workers 的命令行工具
 brew "pandoc" # common
+brew "logi-options-plus" # 罗技鼠标驱动
+brew "jq" # common
+brew "ansible" # automate deploy tool
