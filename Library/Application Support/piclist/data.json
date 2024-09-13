@@ -137,7 +137,8 @@
     "autoStart": true,
     "isHideDock": false,
     "deleteCloudFile": true,
-    "manualPageOpen": "window"
+    "manualPageOpen": "window",
+    "autoRename": false
   },
   "picgoPlugins": {
     "picgo-plugin-rclone": true
@@ -179,6 +180,12 @@
         }
       ],
       "defaultId": "a8179632-2fb5-4b08-833d-01083138dbc5"
+    }
+  },
+  "buildIn": {
+    "rename": {
+      "enable": false,
+      "format": "{fileName}-{md5}.{extName}"
     }
   }
 }

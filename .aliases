@@ -6,9 +6,14 @@ bindkey -s '^o' 'ranger^M'
 bindkey -s '^s' 'ncdu^M'
 
 
-### ALIASES ### 
+### ALIASES ###
+
+alias vals='nvim ~/.aliases'
+alias sals='source ~/.aliases'
+alias fals='bat ~/.aliases | grep '
+
 # tmux
-# Set Tmux plugin to resurrect every time workstation restarted 
+# Set Tmux plugin to resurrect every time workstation restarted
 # Ctrl+A Ctrl+S to Save / Ctrl+A Ctrl+R to Resurrect
 alias ta='tmux attach -t'
 alias tl='tmux ls'
@@ -55,7 +60,7 @@ alias dt='docker tag'
 # alias kr='kubectl rollout'
 
 # navigation
-alias ..='cd ..' 
+alias ..='cd ..'
 alias ...='cd ../..'
 alias .3='cd ../../..'
 alias .4='cd ../../../..'
@@ -96,18 +101,19 @@ alias psg='ps aux | grep'
 
 # git
 alias addup='git add -u'
-alias addall='git add .'
+alias adda='git add .'
 alias branch='git branch'
 alias checkout='git checkout'
 alias clone='git clone'
-alias commit='git commit -m'
+alias gcm='git commit -m'
 alias fetch='git fetch'
 alias pull='git pull origin'
 alias push='git push origin'
-alias status='git status'
+alias gst='git status'
 alias tag='git tag'
 alias ntag='git tag -a'
 alias lg='lazygit'
+alias glgg='git log --oneline --graph --decorate --all'
 
 # # switch between shells
 alias tobash="sudo chsh $USER -s /bin/bash && echo 'Now log out.'"
@@ -119,8 +125,8 @@ alias proxy='export https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.
 alias proxy24='export all_proxy=socks5://10.0.9.24:7890'
 alias unproxy='unset all_proxy'
 # alias whami='curl cip.cc'
-alias whereami='curl ip-api.com/json | jq .'
-alias ispx='env | grep proxy'
+alias whereami='curl ip-api.com'
+alias isproxy='env | grep proxy'
 
 # dell ipmi control fan
 alias fanspd16p='sudo ipmitool -I lanplus -H 10.0.9.9 -U root -P 03220123Crisv raw \
