@@ -139,6 +139,7 @@
     "deleteCloudFile": true,
     "manualPageOpen": "window",
     "autoRename": false
+    "useBuiltinClipboard": false
   },
   "picgoPlugins": {
     "picgo-plugin-rclone": true
