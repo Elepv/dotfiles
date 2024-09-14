@@ -12,7 +12,7 @@ bindkey -s '^s' 'ncdu^M'
 alias tobash="sudo chsh $USER -s /bin/bash && echo 'Now log out.'"
 alias tozsh="sudo chsh $USER -s /bin/zsh && echo 'Now log out.'"
 
-# proxy
+## proxy
 # alias proxy='export all_proxy=socks5://10.0.9.99:7890'
 alias proxy='export https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.1:7890 all_proxy=socks5://127.0.0.1:7890'
 alias proxy24='export all_proxy=socks5://10.0.9.24:7890'
