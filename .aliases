@@ -141,3 +141,17 @@ sudo ipmitool -I lanplus -H 10.0.9.9 -U root -P 03220123Crisv raw \
 
 alias showfanspd='sudo ipmitool -I lanplus -H 10.0.9.9 -U root -P 03220123Crisv \
   sensor reading "Temp" "Fan1 RPM" "Fan2 RPM" "Fan3 RPM" "Fan4 RPM" "Fan5 RPM" "Fan6 RPM"'
+
+# VMWare easy commands via functions
+vmup() {
+    [ $1 ] && /Applications/VMware\ Fusion.app/Contents/Library/vmrun -T fusion start ~/Virtual\ Machines.localized/$1.vmwarevm/$1.vmx nogui || echo "Please provide VM name"
+}
+vmdown() {
+    [ $1 ] && /Applications/VMware\ Fusion.app/Contents/Library/vmrun -T fusion stop ~/Virtual\ Machines.localized/$1.vmwarevm/$1.vmx soft=True || echo "Please provide VM name"
+}
+vmlist() {
+  vmls=`ls ~/Virtual\ Machines.localized/ | sed 's/\.vmwarevm$//' | tr "/\n" " "`
+  echo "All available VMs: ${vmls}"
+  vmrn=`/Applications/VMware\ Fusion.app/Contents/Library/vmrun -T fusion list | grep vm | cut -d'/' -f6 | sed 's/\.vmx$//' | tr "/\n" " "`
+  echo "All running VMs: ${vmrn}"
+}
