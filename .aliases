@@ -11,6 +11,8 @@ bindkey -s '^s' 'ncdu^M'
 alias vals='nvim ~/.aliases'
 alias sals='source ~/.aliases'
 alias fals='bat ~/.aliases | grep '
+alias random='openssl rand -base64 '
+alias sshkey='ssh-copy-id -i ~/.ssh/id_ed25519.pub '
 
 # proxy
 # alias proxy='export all_proxy=socks5://10.0.9.99:7890'
