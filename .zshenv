@@ -49,3 +49,6 @@ export PATH="/opt/homebrew/opt/node@20/bin:$PATH"
 
 ### bat theme ###
 export BAT_THEME=tokyonight_night
+
+### kube config
+export KUBECONFIG=~/.kube/k3s-config.yaml
