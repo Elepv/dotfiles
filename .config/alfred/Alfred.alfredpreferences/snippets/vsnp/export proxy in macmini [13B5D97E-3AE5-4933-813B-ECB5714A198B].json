@@ -1,0 +1,8 @@
+{
+  "alfredsnippet" : {
+    "snippet" : "export all_proxy=socks5:\/\/10.0.5.100:7890",
+    "uid" : "13B5D97E-3AE5-4933-813B-ECB5714A198B",
+    "name" : "export proxy in macmini",
+    "keyword" : "sup"
+  }
+}

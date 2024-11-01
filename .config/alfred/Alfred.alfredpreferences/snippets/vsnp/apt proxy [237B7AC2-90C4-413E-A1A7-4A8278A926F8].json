@@ -1,0 +1,8 @@
+{
+  "alfredsnippet" : {
+    "snippet" : "apt-get -y -o Acquire::http::proxy=\"http:\/\/10.0.5.99:7890\" -o Acquire::https::proxy=\"http:\/\/10.0.5.99:7890\" update && \\\napt-get -y -o Acquire::http::proxy=\"http:\/\/10.0.5.99:7890\" -o Acquire::https::proxy=\"http:\/\/10.0.5.99:7890\" \\\ninstall ",
+    "uid" : "237B7AC2-90C4-413E-A1A7-4A8278A926F8",
+    "name" : "apt proxy",
+    "keyword" : "inst"
+  }
+}

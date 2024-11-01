@@ -1,0 +1,8 @@
+{
+  "alfredsnippet" : {
+    "snippet" : "unset https_proxy && unset http_proxy && unset all_proxy",
+    "uid" : "304D338C-BB2A-4AC5-9349-D73298AD847C",
+    "name" : "unset all proxy",
+    "keyword" : "unp"
+  }
+}

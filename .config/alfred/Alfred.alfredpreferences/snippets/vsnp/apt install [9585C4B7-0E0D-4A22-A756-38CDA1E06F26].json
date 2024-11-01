@@ -1,0 +1,8 @@
+{
+  "alfredsnippet" : {
+    "snippet" : "apt-get -y -o Acquire::http::proxy=\"http:\/\/10.0.5.99:7890\" -o Acquire::https::proxy=\"http:\/\/10.0.5.99:7890\" \\\ninstall ",
+    "uid" : "9585C4B7-0E0D-4A22-A756-38CDA1E06F26",
+    "name" : "apt install",
+    "keyword" : "upd"
+  }
+}

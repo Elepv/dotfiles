@@ -1,0 +1,8 @@
+{
+  "alfredsnippet" : {
+    "snippet" : "curl ip-api.com",
+    "uid" : "46E92EDF-10A3-4564-B5D7-285BA06CE5EE",
+    "name" : "curl ip",
+    "keyword" : "cip"
+  }
+}
