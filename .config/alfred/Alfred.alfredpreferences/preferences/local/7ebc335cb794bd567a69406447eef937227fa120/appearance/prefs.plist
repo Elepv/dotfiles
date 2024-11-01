@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
+<<<<<<< HEAD
 <dict/>
+=======
+<dict>
+	<key>lightthemeuid</key>
+	<string>theme.urlimport.8664C00A-837D-4D12-98DE-9DDBBC167B1E</string>
+</dict>
+>>>>>>> refs/remotes/origin/master
 </plist>
